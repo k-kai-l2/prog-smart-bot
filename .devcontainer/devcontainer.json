@@ -1,0 +1,29 @@
+{
+  "name": "Web Development Container",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+  // 拡張機能の設定
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Live Server
+        "ritwickdey.LiveServer",
+        // その他便利な拡張機能
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag"
+      ],
+      "settings": {
+        "liveServer.settings.donotShowInfoMsg": true,
+        "liveServer.settings.port": 5500
+      }
+    }
+  },
+
+  // ポートフォワーディングの設定
+  "forwardPorts": [5500],
+  
+  // コンテナ起動後に実行するコマンド
+  "postCreateCommand": "echo 'Dev container is ready!'"
+}
